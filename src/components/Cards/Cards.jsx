@@ -1,12 +1,14 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../Card/Card';
+import styles from './Cards.module.css'
+
 
 export default function Cards({ cities }) {
   console.log(cities);
   // acá va tu código
   // tip, podés usar un map
   return (
-    <>
+    <div className={styles.contenedor}>
       {
         cities.map(city => (
           <Card
@@ -19,6 +21,6 @@ export default function Cards({ cities }) {
         ))
       }
 
-    </>
+    </div>
   )
 };
